@@ -1,9 +1,17 @@
+@import "measure_assets/menu.css.less";
+
+@measure-submenu-background-color: @measure-menu-tab-current-background-color;
+@measure-submenu-border-color: #aec0c6;
+@measure-submenu-border: 1px solid @measure-submenu-border-color;
+
+@measure-submenu-height: 36px;
+
 .submenu {
-    background: url(/assets/menu/bg_submenu.png) #e7eced repeat-x;
-    border-bottom: 1px solid #aec0c6;
-    min-height: 36px;
+    background: url(/assets/menu/bg_submenu.png) @measure-submenu-background-color repeat-x;
+    border-bottom: @measure-submenu-border;
+    min-height: @measure-submenu-height;
 }
 
 .submenu_lieu {
-    border-top: 1px solid #aec0c6;
+    border-top: @measure-submenu-border;
 }

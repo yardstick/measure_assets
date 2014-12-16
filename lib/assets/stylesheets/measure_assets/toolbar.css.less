@@ -1,13 +1,19 @@
+@measure-toolbar-font-color: #cacecf;
+@measure-toolbar-background-color: #0f252c;
+@measure-toolbar-border-color: #426873;
+@measure-toolbar-shadow-color: #162c32;
+@measure-toolbar-anchor-color: #fff;
+
 .toolbar {
     * {
         margin-top: 0;
         margin-bottom: 0;
     }
 
-    color: #CACECF;
-    background: #0F252C url(/assets/toolbar/bg_toolbar.png) repeat-x 0 0;
-    border-bottom: 1px solid #426873;
-    text-shadow: #162C32 -1px 1px 3px;
+    color: @measure-toolbar-font-color;
+    background: @measure-toolbar-background-color url(/assets/toolbar/bg_toolbar.png) repeat-x 0 0;
+    border-bottom: 1px solid @measure-toolbar-border-color;
+    text-shadow: @measure-toolbar-shadow-color -1px 1px 3px;
 
     font-size: 11px;
 
@@ -15,13 +21,13 @@
     line-height: 29px;
 
     h1 {
-        color: #fff;
+        color: @measure-toolbar-anchor-color;
         font-weight: normal;
         font-size: 13px;
     }
 
     a {
-        color: #fff;
+        color: @measure-toolbar-anchor-color;
     }
 
     .slash {

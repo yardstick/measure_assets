@@ -1,7 +1,16 @@
 @import "lesselements.css.less";
 
+@measure-menu-background-color: #173742;
+@measure-menu-tab-background-color: #4d7280;
+@measure-menu-tab-text-color: #fff;
+@measure-menu-tab-text-shadow-color: #304750;
+@measure-menu-tab-hover-background-color: #608e9f;
+@measure-menu-tab-current-background-color: #e7eced;
+@measure-menu-tab-current-text-color: #436470;
+@measure-menu-tab-current-text-shadow-color: #fff;
+
 .menu {
-    background: #173742 url(/assets/menu/bg_menu.png) repeat-x 0 -12px;
+    background: @measure-menu-background-color url(/assets/menu/bg_menu.png) repeat-x 0 -12px;
 
     .container {
         background-image: url(/assets/logos/measure_logo.png);
@@ -21,26 +30,26 @@
             margin-right: 2px;
             a {
                 display: block;
-                background: #4D7280;
+                background: @measure-menu-tab-background-color;
                 font-size: 11px;
                 font-weight: bold;
-                color: #fff;
+                color: @measure-menu-tab-text-color;
                 padding: 5px 12px;
                 border-radius: 8px 8px 0 0;
-                text-shadow: 0 1px 1px #304750;
+                text-shadow: 0 1px 1px @measure-menu-tab-text-shadow-color;
                 .transition-duration(0.15s);
 
                 &:hover {
                     text-decoration: none;
-                    background: #608e9f;
+                    background: @measure-menu-tab-hover-background-color;
                     padding-bottom: 10px;
                     margin-top: -5px;
                 }
 
                 &.current {
-                    background: #e7eced;
-                    color: #436470;
-                    text-shadow: 0 1px 1px #fff;
+                    background: @measure-menu-tab-current-background-color;
+                    color: @measure-menu-tab-current-text-color;
+                    text-shadow: 0 1px 1px @measure-menu-tab-current-text-shadow-color;
                     // stop the hover pop
                     padding: 5px 12px;
                     margin-top: 0;
