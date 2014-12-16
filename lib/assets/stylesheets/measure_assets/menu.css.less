@@ -1,0 +1,51 @@
+@import "lesselements.css.less";
+
+.menu {
+    background: #173742 url(/assets/menu/bg_menu.png) repeat-x 0 -12px;
+
+    .container {
+        background-image: url(/assets/logos/measure_logo.png);
+        background-repeat: no-repeat;
+        background-position: right -12px;
+    }
+
+    ul {
+        margin-top: 0;
+        margin-bottom: 0;
+
+        padding-top: 23px;
+
+        li {
+            float: left;
+            display: inline-block;
+            margin-left: 2px;
+            a {
+                display: block;
+                background: #4D7280;
+                font-size: 11px;
+                font-weight: bold;
+                color: #fff;
+                padding: 5px 12px;
+                border-radius: 8px 8px 0 0;
+                text-shadow: 0 1px 1px #304750;
+                .transition-duration(0.15s);
+
+                &:hover {
+                    text-decoration: none;
+                    background: #608e9f;
+                    padding-bottom: 10px;
+                    margin-top: -5px;
+                }
+
+                &.current {
+                    background: #e7eced;
+                    color: #436470;
+                    text-shadow: 0 1px 1px #fff;
+                    // stop the hover pop
+                    padding: 5px 12px;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}

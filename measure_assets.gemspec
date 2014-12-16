@@ -7,9 +7,9 @@ Gem::Specification.new do |spec|
   spec.name          = "measure_assets"
   spec.version       = MeasureAssets::VERSION
   spec.authors       = ["Jason Wall"]
-  spec.email         = ["javajo@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.email         = ["jasonw@getyardstick.com"]
+  spec.summary       = %q{Gem for making sub-apps look EXACTLY like measure admin...}
+  spec.description   = %q{Including menus, sub menus tabs, sub tabs, widgets (eventually). All the things.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -17,6 +17,8 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
+
+  spec.add_runtime_dependency "lesselements-rails", ">= 0.9"
 
   spec.add_development_dependency "bundler", "~> 1.5"
   spec.add_development_dependency "rake"
