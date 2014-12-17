@@ -1,0 +1,44 @@
+@measure-toolbar-font-color: #cacecf;
+@measure-toolbar-background-color: #0f252c;
+@measure-toolbar-border-color: #426873;
+@measure-toolbar-shadow-color: #162c32;
+@measure-toolbar-anchor-color: #fff;
+
+.toolbar {
+    * {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    color: @measure-toolbar-font-color;
+    background: @measure-toolbar-background-color image-url('toolbar/bg_toolbar.png') repeat-x 0 0;
+    border-bottom: 1px solid @measure-toolbar-border-color;
+    text-shadow: @measure-toolbar-shadow-color -1px 1px 3px;
+
+    font-size: 11px;
+
+    height: 29px;
+    line-height: 29px;
+
+    h1 {
+        color: @measure-toolbar-anchor-color;
+        font-weight: normal;
+        font-size: 13px;
+    }
+
+    a {
+        color: @measure-toolbar-anchor-color;
+    }
+
+    .slash {
+        background-image: image-url('toolbar/toolbar_slash.png');
+        background-repeat: no-repeat;
+        background-position: right 0;
+        display: inline-block;
+    }
+
+    .toolbar_item {
+        padding-right: 29px;
+        margin-left: 12px;
+    }
+}

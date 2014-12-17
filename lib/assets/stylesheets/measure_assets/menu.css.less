@@ -1,0 +1,60 @@
+@import "lesselements.css.less";
+
+@measure-menu-background-color: #173742;
+@measure-menu-tab-background-color: #4d7280;
+@measure-menu-tab-text-color: #fff;
+@measure-menu-tab-text-shadow-color: #304750;
+@measure-menu-tab-hover-background-color: #608e9f;
+@measure-menu-tab-current-background-color: #e7eced;
+@measure-menu-tab-current-text-color: #436470;
+@measure-menu-tab-current-text-shadow-color: #fff;
+
+.menu {
+    background: @measure-menu-background-color image-url('menu/bg_menu.png') repeat-x 0 -12px;
+
+    .container {
+        background-image: image-url('logos/measure_logo.png');
+        background-repeat: no-repeat;
+        background-position: right -12px;
+    }
+
+    ul {
+        margin-top: 0;
+        margin-bottom: 0;
+
+        padding-top: 23px;
+
+        li {
+            float: left;
+            display: inline-block;
+            margin-right: 2px;
+            a {
+                display: block;
+                background: @measure-menu-tab-background-color;
+                font-size: 11px;
+                font-weight: bold;
+                color: @measure-menu-tab-text-color;
+                padding: 5px 12px;
+                border-radius: 8px 8px 0 0;
+                text-shadow: 0 1px 1px @measure-menu-tab-text-shadow-color;
+                .transition-duration(0.15s);
+
+                &:hover {
+                    text-decoration: none;
+                    background: @measure-menu-tab-hover-background-color;
+                    padding-bottom: 10px;
+                    margin-top: -5px;
+                }
+
+                &.current {
+                    background: @measure-menu-tab-current-background-color;
+                    color: @measure-menu-tab-current-text-color;
+                    text-shadow: 0 1px 1px @measure-menu-tab-current-text-shadow-color;
+                    // stop the hover pop
+                    padding: 5px 12px;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
