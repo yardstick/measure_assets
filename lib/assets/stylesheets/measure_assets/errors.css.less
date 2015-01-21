@@ -1,0 +1,45 @@
+@import "lesselements.css.less";
+
+@measure-error-border-red: #ef8c6b;
+@measure-error-background-red: #f9d3c7;
+@measure-error-font-red: #531c09;
+
+@measure-success-font-green: #387038;
+@measure-success-border-green: #9c9;
+@measure-success-background-green: #e2f9e3;
+
+.errors, .success {
+  margin: 16px auto 0 auto;
+  padding: 8px;
+  font-size: 16px;
+
+  width: 600px;
+
+  h4 {
+    line-height: 13px;
+  }
+}
+
+.errors {
+  background-color: @measure-error-background-red;
+  color: @measure-error-font-red;
+  border: 2px solid @measure-error-border-red;
+  .border-radius(8px, 8px, 8px, 8px);
+
+  a {
+    color: @measure-error-border-red;
+    font-size: 12px;
+  }
+}
+
+.success {
+  .border-radius(8px, 8px, 8px, 8px);
+  background-color: @measure-success-background-green;
+  color: @measure-success-font-green;
+  border: 2px solid @measure-success-border-green;
+
+  a {
+    color: @measure-success-border-green;
+    font-size: 12px;
+  }
+}

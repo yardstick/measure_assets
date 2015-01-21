@@ -8,21 +8,27 @@
 @measure-menu-tab-current-background-color: #e7eced;
 @measure-menu-tab-current-text-color: #436470;
 @measure-menu-tab-current-text-shadow-color: #fff;
+@measure-navbar-height: 53px;
 
 .menu {
     background: @measure-menu-background-color image-url('menu/bg_menu.png') repeat-x 0 -12px;
+    height: @measure-navbar-height;
+
+    @padding: 24px;
+    @tab-height: @measure-navbar-height - @padding;
 
     .container {
         background-image: image-url('logos/measure_logo.png');
         background-repeat: no-repeat;
         background-position: right -12px;
+        height: @tab-height;
     }
 
     ul {
         margin-top: 0;
         margin-bottom: 0;
 
-        padding-top: 23px;
+        padding-top: @padding;
 
         li {
             float: left;
