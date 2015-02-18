@@ -1,16 +1,53 @@
 @import "measure_assets/menu.css.less";
+@import "lesselements.css.less";
 
 @measure-submenu-background-color: @measure-menu-tab-current-background-color;
 @measure-submenu-border-color: #aec0c6;
 @measure-submenu-border: 1px solid @measure-submenu-border-color;
 @measure-submenu-height: 36px;
+@measure-submenu-link-color: #1a3f49;
+@measure-submenu-link-background-color: #c0d2d8;
 
 .submenu {
-    background: image-url('menu/bg_submenu.png') @measure-submenu-background-color repeat-x;
-    border-bottom: @measure-submenu-border;
-    min-height: @measure-submenu-height;
+  background: image-url('menu/bg_submenu.png') @measure-submenu-background-color repeat-x;
+  border-bottom: @measure-submenu-border;
+  min-height: @measure-submenu-height;
+
+  ul {
+    list-style: none;
+
+    li {
+      margin-right: 5px;
+      float: left;
+
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 11px;
+        line-height: 11px;
+        display: block;
+        padding: 5px 10px;
+        color: @measure-submenu-link-color;
+        margin-top: 8px;
+
+        .rounded(10px);
+
+        &:hover {
+          background: @measure-submenu-link-background-color;
+        }
+      }
+
+      &.current a {
+        background: @measure-submenu-link-background-color;
+      }
+    }
+  }
+
+  .container {
+    margin: 0px;
+  }
 }
 
 .submenu_lieu {
-    border-top: @measure-submenu-border;
+  border-top: @measure-submenu-border;
 }
