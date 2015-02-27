@@ -4,6 +4,9 @@
 @measure-font-green: #2d5662;
 @measure-font-black: #333;
 @measure-font-link-green: #318ead;
+@measure-body-background: image-url('bg_grain.png');
+
+@measure-container-padding: 40px;
 
 body {
     margin: 0;
@@ -11,11 +14,11 @@ body {
     font-family: "Lucida Grande", Lucida, Helvetica, sans-serif;
     font-size: 13px;
     line-height: 1.5em;
-    background: image-url('bg_grain.png');
+    background: @measure-body-background;
 }
 
 .container {
-    padding: 0 40px;
+    padding: 0 @measure-container-padding;
     width: auto;
 }
 

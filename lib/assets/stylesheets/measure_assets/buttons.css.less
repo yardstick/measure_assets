@@ -1,6 +1,12 @@
 @import "measure_assets/base.css.less";
 @import "lesselements.css.less";
 
+@measure-button-border-color: #555;
+@measure-button-color: #555;
+
+@measure-button-hover-color: #000;
+@measure-button-hover-border-color: #222;
+
 .btn,
 a.btn {
   .border-radius(8px, 8px, 8px, 8px);
@@ -11,7 +17,7 @@ a.btn {
   height: 34px;
   text-shadow: #fff 1px 1px 1px;
   padding: 0 8px;
-  border: 1px solid #555;
+  border: 1px solid @measure-button-border-color;
   cursor: pointer;
 
   &.btn-large {
@@ -30,14 +36,14 @@ a.btn {
   }
 
   &:hover {
-    color: #000;
-    border-color: #222;
+    color: @measure-button-hover-color;
+    border-color: @measure-button-hover-border-color;
     text-decoration: none;
   }
 }
 
 .btn {
-  color: #555;
+  color: @measure-button-color;
   .gradient(#ccc, #dedfdf, #fff);
 
   &.btn-primary {

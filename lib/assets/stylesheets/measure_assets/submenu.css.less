@@ -7,9 +7,11 @@
 @measure-submenu-height: 36px;
 @measure-submenu-link-color: #1a3f49;
 @measure-submenu-link-background-color: #c0d2d8;
+@measure-submenu-background: image-url('menu/bg_submenu.png') @measure-submenu-background-color repeat-x;
+@measure-submenu-link-current-color: @measure-submenu-link-color;
 
 .submenu {
-  background: image-url('menu/bg_submenu.png') @measure-submenu-background-color repeat-x;
+  background: @measure-submenu-background;
   border-bottom: @measure-submenu-border;
   min-height: @measure-submenu-height;
 
@@ -34,11 +36,13 @@
 
         &:hover {
           background: @measure-submenu-link-background-color;
+          color: @measure-submenu-link-current-color;
         }
       }
 
       &.current a {
         background: @measure-submenu-link-background-color;
+        color: @measure-submenu-link-current-color;
       }
     }
   }

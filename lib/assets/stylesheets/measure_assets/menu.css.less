@@ -10,17 +10,18 @@
 @measure-menu-tab-current-text-shadow-color: #fff;
 @measure-navbar-height: 53px;
 
+@measure-menu-background: @measure-menu-background-color image-url('menu/bg_menu.png') repeat-x 0 -12px;
+@measure-menu-container-background: image-url('logos/measure_logo.png') no-repeat right -12px;
+
 .menu {
-    background: @measure-menu-background-color image-url('menu/bg_menu.png') repeat-x 0 -12px;
+    background: @measure-menu-background;
     height: @measure-navbar-height;
 
     @padding: 24px;
     @tab-height: @measure-navbar-height - @padding;
 
     .container {
-        background-image: image-url('logos/measure_logo.png');
-        background-repeat: no-repeat;
-        background-position: right -12px;
+        background: @measure-menu-container-background;
         height: @tab-height;
     }
 
