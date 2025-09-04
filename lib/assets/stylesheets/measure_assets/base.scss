@@ -1,0 +1,35 @@
+$measure-green-light: #4a6e77;
+$measure-green-dark: #163843;
+
+$measure-font-green: #2d5662;
+$measure-font-black: #333;
+$measure-font-link-green: #318ead;
+$measure-body-background: image-url('bg_grain.png');
+
+$measure-container-padding: 40px;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lucida Grande", Lucida, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 1.5em;
+    background: $measure-body-background;
+}
+
+.container {
+    padding: 0 $measure-container-padding;
+    width: auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
