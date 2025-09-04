@@ -1,15 +1,15 @@
-@import "measure_assets/base.css.less";
-@import "lesselements.css.less";
+@import "measure_assets/base.css";
+@import "elements";
 
-@measure-button-border-color: #555;
-@measure-button-color: #555;
+$measure-button-border-color: #555;
+$measure-button-color: #555;
 
-@measure-button-hover-color: #000;
-@measure-button-hover-border-color: #222;
+$measure-button-hover-color: #000;
+$measure-button-hover-border-color: #222;
 
 .btn,
 a.btn {
-  .border-radius(8px, 8px, 8px, 8px);
+  @include border-radius(8px, 8px, 8px, 8px);
   display: inline-block;
   font-weight: bold;
   font-size: 11px;
@@ -17,7 +17,7 @@ a.btn {
   height: 34px;
   text-shadow: #fff 1px 1px 1px;
   padding: 0 8px;
-  border: 1px solid @measure-button-border-color;
+  border: 1px solid $measure-button-border-color;
   cursor: pointer;
 
   &.btn-large {
@@ -32,36 +32,36 @@ a.btn {
     line-height: 28px;
     font-size: 11px;
     padding: 0 5px;
-    .border-radius(4px, 4px, 4px, 4px);
+    @include border-radius(4px, 4px, 4px, 4px);
   }
 
   &:hover {
-    color: @measure-button-hover-color;
-    border-color: @measure-button-hover-border-color;
+    color: $measure-button-hover-color;
+    border-color: $measure-button-hover-border-color;
     text-decoration: none;
   }
 }
 
 .btn {
-  color: @measure-button-color;
-  .gradient(#ccc, #dedfdf, #fff);
+  color: $measure-button-color;
+  @include gradient(#ccc, #dedfdf, #fff);
 
   &.btn-primary {
     font-weight: normal;
     color: #efefef;
     color: rgba(255,255,255, 0.95);
     text-shadow: #000 1px 1px 1px;
-    .gradient(@measure-font-green, @measure-green-dark, @measure-green-light);
+    @include gradient($measure-font-green, $measure-green-dark, $measure-green-light);
 
     &:hover {
       color: #fff;
-      text-shadow: @measure-font-black 1px 1px 1px;
+      text-shadow: $measure-font-black 1px 1px 1px;
     }
   }
 }
 
 .btn:disabled {
-  .gradient(#777, #888, #333);
+  @include gradient(#777, #888, #333);
   text-shadow: none;
   color: rgba(255,255,255, 0.85);
 
